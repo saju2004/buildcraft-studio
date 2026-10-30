@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  address: 127.0.0.1
+
+spring:
+  application:
+    name: BuildCraft Studio Backend
+  datasource:
+    url: jdbc:sqlite:buildcraft_studio.db
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+
+# CORS configuration for Electron and Web dev
+app:
+  cors:
+    allowed-origins: "http://localhost:5173,http://localhost:3000,file://"
+
+logging:
+  level:
+    root: INFO
+    com.buildcraftstudio: DEBUG

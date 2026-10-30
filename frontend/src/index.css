@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #0f1115;
+    color: #f1f5f9;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom CAD dark scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #12151b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a323f;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3b4657;
+  }
+}
+
+/* CAD canvas cursor styles */
+.cursor-crosshair-cad {
+  cursor: crosshair;
+}
+
+.cursor-grab-cad {
+  cursor: grab;
+}
+
+.cursor-grabbing-cad {
+  cursor: grabbing;
+}
